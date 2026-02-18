@@ -1,16 +1,16 @@
-<<<<<<< HEAD
+
 import React, { useState, useCallback } from 'react';
-=======
+
 
 import React, { useState, useCallback, useEffect } from 'react';
->>>>>>> 646a2e10861d57f71c70c303f1b98b08bceb3a7f
+
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import Header from './components/Header';
 import Dropzone from './components/Dropzone';
 import ChatPanel from './components/ChatPanel';
-<<<<<<< HEAD
+
 import { Note, ChatMessage } from './types';
 import { extractTextFromPDF, readFileAsText, generateId } from './utils/fileHelpers';
 import { summarizeNote, answerQuestion } from './services/geminiService';
@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [isAssistantThinking, setIsAssistantThinking] = useState(false);
-=======
+
 import QuizView from './components/QuizView';
 import ProgressView from './components/ProgressView';
 import LessonsView from './components/LessonsView';
@@ -57,7 +57,7 @@ const App: React.FC = () => {
       updateAnalysis();
     }
   }, [notes, quizHistory]);
->>>>>>> 646a2e10861d57f71c70c303f1b98b08bceb3a7f
+
 
   const handleFilesSelected = useCallback(async (files: File[]) => {
     setIsProcessing(true);
@@ -123,7 +123,7 @@ const App: React.FC = () => {
     }
   };
 
-<<<<<<< HEAD
+
   return (
     <div className="min-h-screen flex flex-col bg-[#FDFCF8] text-[#2D2D2D]">
       <Header />
@@ -218,7 +218,7 @@ const App: React.FC = () => {
       <footer className="py-10 border-t border-[#E5E2D9] text-center bg-white">
         <p className="text-[#26BAA4] text-[10px] font-black uppercase tracking-[0.3em]">The Architecture of Thought</p>
         <p className="text-[#666] text-[9px] mt-2 font-medium opacity-60">© Second Brain Intelligence Suite</p>
-=======
+
   const handleQuizComplete = (score: number, total: number) => {
     const result: QuizResult = { score, total, timestamp: Date.now() };
     setQuizHistory(prev => [...prev, result]);
@@ -332,14 +332,14 @@ const App: React.FC = () => {
       <footer className="py-10 border-t border-[#E5E2D9] dark:border-[#262626] text-center bg-white dark:bg-[#1A1A1A] transition-colors duration-300">
         <p className="text-[#26BAA4] text-[10px] font-black uppercase tracking-[0.3em]">The Architecture of Thought</p>
         <p className="text-[#666] dark:text-[#AAA] text-[9px] mt-2 font-medium opacity-60">© Second Brain Intelligence Suite</p>
->>>>>>> 646a2e10861d57f71c70c303f1b98b08bceb3a7f
+
       </footer>
     </div>
   );
 };
 
-<<<<<<< HEAD
+
 export default App;
-=======
+
 export default App;
->>>>>>> 646a2e10861d57f71c70c303f1b98b08bceb3a7f
+
