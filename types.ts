@@ -20,3 +20,48 @@ export interface SummaryResponse {
   summary: string;
   keyTakeaways: string[];
 }
+<<<<<<< HEAD
+=======
+
+export type QuizDifficulty = 'Foundational' | 'Standard' | 'Rigorous' | 'Elite';
+
+export interface QuizQuestion {
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  explanation: string;
+}
+
+export interface QuizResult {
+  score: number;
+  total: number;
+  timestamp: number;
+}
+
+export interface LessonDrill {
+  conceptExplanation: string;
+  exampleProblem: string;
+  exampleSolution: string;
+  practiceQuestion: string;
+  practiceAnswer: string;
+  practiceExplanation: string;
+}
+
+export interface ProgressAnalysis {
+  overallMastery: number;
+  studyTimeEstimate: string;
+  streakCount: number;
+  subjects: {
+    name: string;
+    strength: string[];
+    weakness: string[];
+    masteryScore: number;
+    completionPercentage: number;
+    highYieldTopics: string[];
+  }[];
+}
+
+export type PlanType = 'Basic' | 'Brain Plus+' | 'Brain Ultra';
+
+export type AppView = 'repository' | 'quiz' | 'progress' | 'lessons';
+>>>>>>> 646a2e10861d57f71c70c303f1b98b08bceb3a7f
